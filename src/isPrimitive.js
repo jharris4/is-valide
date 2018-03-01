@@ -1,0 +1,10 @@
+export const isBoolean = v => v === true || v === false;
+export const isNumber = v => v !== void 0 && (typeof v === "number" || v instanceof Number) && isFinite(v);
+export const isString = v => v !== void 0 && (typeof v === "string" || v instanceof String);
+export const isArray = v => Array.isArray(v);
+export const isObject = v => v !== null && v !== void 0 && typeof v === "object";
+export const isAny = v => true;
+export const isNumeric = v => !isNaN(parseFloat(v)) && isFinite(v);
+export const isInteger = v => isNumber(v) && v % 1 === 0;
+export const isUndefined = v => v === void 0;
+export const isNull = v => v === null;
